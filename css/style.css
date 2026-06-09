@@ -1,0 +1,954 @@
+/* ==========================================
+   Reset & Base
+========================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  color: #333;
+  line-height: 1.7;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* ==========================================
+   Variables
+========================================== */
+:root {
+  --color-navy:       #0d1f5c;
+  --color-navy-dark:  #091548;
+  --color-gold:       #f5a200;
+  --color-green:      #2e7d5e;
+  --color-pink:       #c0395a;
+  --color-white:      #ffffff;
+  --color-bg-light:   #f5f5f5;
+  --color-text:       #333333;
+  --color-text-light: #666666;
+
+  --max-width: 900px;
+  --section-padding: 16px 16px;
+}
+
+/* ==========================================
+   Utility
+========================================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--color-navy);
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-gold);
+  margin: 12px auto 0;
+}
+
+.section-title--light {
+  color: var(--color-white);
+}
+
+.section-title--light::after {
+  background-color: var(--color-gold);
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn--primary {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+}
+
+.btn--secondary {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* ==========================================
+   Placeholder Styles（開発用）
+========================================== */
+/* .img-placeholder,
+.map-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 160px;
+}
+
+.map-placeholder {
+  width: 80%;
+  height: 280px;
+  margin: 0 auto 20px;
+} */
+
+/* ==========================================
+   Section 1: メインビジュアル
+========================================== */
+.main {
+  background-color: var(--color-navy-dark);
+  background-image: url('../images/section1/mainvisual.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  text-align: center;
+  padding: 80px 16px 60px;
+  position: relative;
+}
+
+
+
+.main_inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.main_label {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-top: 80px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.main_title {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 3.0rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
+
+.main_description {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  max-width: 480px;
+  margin: 0 auto 32px;
+  line-height: 1.8;
+}
+
+.main_partner {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 2px solid #e05a9a;
+  padding: 16px 32px;
+  width: 80%;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.main_partner-img {
+  height: 120px;
+  max-width: 420px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+/* ==========================================
+   Section 2: 駐車場案内
+========================================== */
+.parking-info {
+  background-color: var(--color-white);
+  padding: 20px 16px 24px;
+}
+
+.parking-info::before {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 2px;
+  background-color: #9ed0e8;
+  margin: 0 auto 20px;
+}
+
+.parking-info__announce {
+  font-weight: 450;
+  text-align: center;
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  color: var(--color-navy);
+  line-height: 1.9;
+}
+
+.parking-info__count {
+  font-size: 1.9rem;
+  color: #e05a9a;
+  font-weight: 600;
+  vertical-align: baseline;
+}
+
+.parking-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.parking-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.parking-card--green {
+  background-color: #a8cf5b;
+}
+
+.parking-card--blue {
+  background-color: #9ed0e8;
+}
+
+.parking-card__number {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  flex-shrink: 0;
+}
+
+.parking-card__title {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-navy);
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   Section 3 & 4: 駐車場詳細（公式・協力）
+========================================== */
+
+/* ---- 公式駐車場: 薄黄緑背景 ---- */
+.parking-detail--official {
+  background-color: #f4fae8;
+  padding: var(--section-padding);
+}
+
+/* ---- 協力駐車場: 薄水色背景 ---- */
+.parking-detail--coop {
+  background-color: #edf6fb;
+  padding: var(--section-padding);
+}
+
+/* ---- ヘッダー（pill + 駐車場名 + タグ） ---- */
+.parking-detail__header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.parking-detail__header--simple {
+  margin-bottom: 20px;
+}
+
+/* 小さめのpillラベル */
+.parking-card--sm {
+  padding: 10px 20px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.parking-card--sm .parking-card__number {
+  font-size: 1.2rem;
+}
+
+.parking-card--sm .parking-card__title {
+  font-size: 1.1rem;
+}
+
+.parking-detail__name-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  border-bottom: 2px solid #bbb;
+  padding-bottom: 8px;
+}
+
+.parking-detail__name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.parking-detail__tags {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.parking-detail__tag {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  line-height: 1.4;
+}
+
+/* ---- 説明文 ---- */
+.parking-detail__desc {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  margin-bottom:24px;
+  padding-left: 8px;
+  text-align: center;
+}
+
+.parking-detail__desc--center {
+  text-align: center;
+  padding-left: 0;
+}
+
+/* ---- 情報テーブル ---- */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 28px;
+  font-size: 0.75rem;
+}
+
+.info-table th,
+.info-table td {
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  text-align: left;
+  vertical-align: top;
+}
+
+.info-table th {
+  background-color: #fff;
+  font-weight: 600;
+  color: var(--color-navy);
+  width: 110px;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.info-table td {
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+/* ---- 注意書き ---- */
+.parking-detail__note {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  padding: 4px 16px;
+  margin: 16px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0 4px 4px 0;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+.parking-detail__note::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: -8px;
+  width: 30px;
+  height: 30px;
+  background: url('../images/accent1.png') no-repeat center / contain;
+  pointer-events: none;
+}
+
+.parking-detail__note::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: -8px;
+  width: 30px;
+  height: 30px;
+  background: url('../images/accent2.png') no-repeat center / contain;
+  pointer-events: none;
+}
+
+/* ---- お礼・注意文（協力駐車場） ---- */
+.parking-detail__courtesy {
+  font-size: 0.65rem;
+  color: #43b9f4;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+/* ---- Parking Map タイトル ---- */
+.parking-map__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 32px 0 20px;
+  letter-spacing: 0.15em;
+  background: linear-gradient(90deg, #7b4fc7, #e05a9a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- CTAボタン（大きい丸ボタン） ---- */
+.parking-detail__cta {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.btn-cta {
+  display: inline-block;
+  padding: 18px 64px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-white);
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-cta::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 72px;
+  height: 72px;
+  background: url('../images/finger.png') no-repeat center / contain;
+  pointer-events: none;
+}
+
+.btn-cta:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.btn-cta--green {
+  background: linear-gradient(to right, #a8d858 0%, #4caf50 100%);
+}
+
+.btn-cta--purple {
+  background: linear-gradient(to right, #5e35b1 0%, #9c6fd6 100%);
+}
+
+/* ==========================================
+   Section 5: 予約方法
+========================================== */
+.reservation {
+  background-color: transparent;
+  padding: var(--section-padding);
+}
+
+/* 左右2カラムレイアウト */
+.reservation__layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---- 左: タイトル＋縦書き説明 ---- */
+.reservation__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.reservation__title {
+  font-size: 3.0rem;
+  font-weight: 750;
+  color: var(--color-navy);
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.reservation__desc {
+  font-size: 0.85rem;
+  color: #7dacf8;
+  line-height: 2;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* ---- 右: グリッド＋ボタン ---- */
+.reservation__right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 2×2 ステップグリッド */
+.reservation-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.reservation-step {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 上段: 白背景＋バッジ＋名前＋イラスト */
+.reservation-step__upper {
+  background-color: #aac8ff;
+  padding: 8px 8px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+}
+
+/* STEPバッジ */
+.reservation-step__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e07090;
+  color: #fff;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  padding: 4px;
+}
+
+.reservation-step__badge-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.reservation-step__badge-num {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.reservation-step__name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.reservation-step__img {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+
+/* 下段: ネイビー背景＋白テキスト */
+.reservation-step__lower {
+  background-color: var(--color-navy);
+  color: #fff;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* CTAボタン */
+.reservation__cta {
+  text-align: center;
+}
+
+.btn-cta--pink {
+  background: linear-gradient(135deg, #e879b0, #c084d8);
+}
+
+/* ==========================================
+   Section 6: 当日の使い方
+========================================== */
+.howto {
+  background-color: var(--color-white);
+  padding: var(--section-padding);
+}
+
+.howto::before {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 2px;
+  background-color: #9ed0e8;
+  margin: 0 auto 20px;
+}
+
+.howto__title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-navy);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.howto-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.howto-card {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.howto-card--pink {
+  background-color: #fde9ef;
+}
+
+.howto-card--green {
+  background-color: #eef5e4;
+}
+
+/* ---- pillタイトル ---- */
+.howto-card__pill {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  font-weight: 300;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 0.25em;
+}
+
+.howto-card__pill--pink {
+  background-color: #e07088;
+  color: var(--color-white);
+}
+
+.howto-card__pill--green {
+  background-color: #7aaa44;
+  color: var(--color-white);
+}
+
+/* ---- 説明テキスト ---- */
+.howto-card__text {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  line-height: 1.75;
+}
+
+/* ---- 画像エリア（横並び） ---- */
+.howto-card img{
+  width: 80%;
+}
+.howto-card__imgs--row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.howto-card__imgs--row .img-placeholder {
+  height: 160px;
+}
+
+/* ---- チケットの表示方法 小見出し ---- */
+.howto-card__subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  text-align: center;
+  margin-bottom: -8px;
+}
+
+/* ---- メソッドボックス ---- */
+.howto-card__methods {
+  border: 1px solid #90b8e0;
+  border-radius: 4px;
+  background-color: var(--color-white);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 0.7rem;
+  color: var(--color-text);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* ---- 注意テキスト（緑カード下部） ---- */
+.howto-card__note {
+  font-size: 0.6rem;
+  color: var(--color-text);
+  text-align: center;
+  line-height: 1.75;
+}
+
+/* ==========================================
+   Section 7: お問合せ
+========================================== */
+.contact {
+  background-color: #f5f9e8;
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.contact__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  letter-spacing: 0.25em;
+  margin-bottom: 8px;
+}
+
+/* ==========================================
+   Section 7: キャンセル対応について
+========================================== */
+.cancel {
+  background-color: var(--color-white);
+  padding: var(--section-padding);
+}
+
+.cancel::before {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background-color: #9ed0e8;
+  margin: 0 auto 20px;
+}
+
+.cancel__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+}
+
+.cancel-card {
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.cancel-card--official {
+  background-color: #f4fae8;
+}
+
+.cancel-card--coop {
+  background-color: #edf6fb;
+}
+
+.cancel-card__header {
+  width: 40%;
+  padding: 8px 16px 0;
+}
+
+.cancel-card__body {
+  padding: 12px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cancel-card__text {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.cancel-card__link {
+  color: var(--color-navy);
+  text-decoration: underline;
+}
+
+.cancel-card__attention {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cancel-card__list {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 2;
+  padding-left: 8px;
+}
+
+.contact__text {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.contact__email {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  letter-spacing: 0.05em;
+  background-color: white;
+  padding: 8px 0;
+  letter-spacing: 0.2em;
+}
+
+.contact__email a {
+  color: var(--color-navy);
+  text-decoration: none;
+}
+
+.contact__email a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   Footer
+========================================== */
+/* .footer {
+  background-color: var(--color-navy-dark);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 20px 16px;
+}
+
+.footer__copy {
+  font-size: 0.8rem;
+} */
+
+/* ==========================================
+   Responsive（スマートフォン対応）
+========================================== */
+@media (max-width: 640px) {
+  :root {
+    --section-padding: 48px 16px;
+  }
+
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  /* 駐車場カード: 縦並び */
+  .parking-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* 公式駐車場ヘッダー: 縦並び */
+  .parking-detail__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .parking-detail__name-group {
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .parking-detail__name {
+    font-size: 1.4rem;
+  }
+
+  .parking-detail__tags {
+    flex-direction: row;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .btn-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 予約方法: 左右レイアウトを縦積みに */
+  .reservation__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation__title {
+    font-size: 2.8rem;
+  }
+
+  .reservation__desc {
+    writing-mode: horizontal-tb;
+    font-size: 0.85rem;
+    color: #8da8d8;
+  }
+
+  /* 当日の使い方: 縦並び */
+  .howto-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .howto__title {
+    font-size: 1.5rem;
+  }
+}
