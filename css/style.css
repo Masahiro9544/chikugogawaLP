@@ -202,7 +202,7 @@ ol, ul {
 }
 
 .main_partner-img {
-  height: 120px;
+  /* height: 120px; */
   max-width: 420px;
   margin: 0 auto;
   background-color: transparent;
