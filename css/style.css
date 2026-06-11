@@ -459,6 +459,13 @@ ol, ul {
   background-clip: text;
 }
 
+/* ---- Parking Map 画像/iframe ---- */
+.map-placeholder {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
 /* ---- CTAボタン（大きい丸ボタン） ---- */
 .parking-detail__cta {
   text-align: center;
