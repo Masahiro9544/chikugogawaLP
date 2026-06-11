@@ -14,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.sp-only {
+  display: none;
+}
+
 body {
   font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
   color: #333;
@@ -167,7 +171,7 @@ ol, ul {
 .main_label {
   font-family: 'Shippori Mincho B1', serif;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.2em;
   margin-top: 80px;
   margin-bottom: 8px;
@@ -228,14 +232,14 @@ ol, ul {
 .parking-info__announce {
   font-weight: 450;
   text-align: center;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   margin-bottom: 20px;
   color: var(--color-navy);
   line-height: 1.9;
 }
 
 .parking-info__count {
-  font-size: 1.9rem;
+  font-size: 1.75rem;
   color: #e05a9a;
   font-weight: 600;
   vertical-align: baseline;
@@ -885,6 +889,10 @@ ol, ul {
 @media (max-width: 640px) {
   :root {
     --section-padding: 48px 16px;
+  }
+
+  .sp-only {
+    display: inline;
   }
 
   .hero__title {
