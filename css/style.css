@@ -151,7 +151,7 @@ ol, ul {
 ========================================== */
 .main {
   background-color: var(--color-navy-dark);
-  background-image: url('../images/section1/mainvisual.webp');
+  background-image: url('../img/cp/chikugogawa/section1/mainvisual.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -422,7 +422,7 @@ ol, ul {
   right: -8px;
   width: 30px;
   height: 30px;
-  background: url('../images/accent1.png') no-repeat center / contain;
+  background: url('../img/cp/chikugogawa/accent1.png') no-repeat center / contain;
   pointer-events: none;
 }
 
@@ -433,7 +433,7 @@ ol, ul {
   left: -8px;
   width: 30px;
   height: 30px;
-  background: url('../images/accent2.png') no-repeat center / contain;
+  background: url('../img/cp/chikugogawa/accent2.png') no-repeat center / contain;
   pointer-events: none;
 }
 
@@ -492,7 +492,7 @@ ol, ul {
   right: -16px;
   width: 72px;
   height: 72px;
-  background: url('../images/finger.png') no-repeat center / contain;
+  background: url('../img/cp/chikugogawa/finger.png') no-repeat center / contain;
   pointer-events: none;
 }
 
